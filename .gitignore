@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Production and generated builds
+dist/
+.selfplay-dist/
+.train-dist/
+
+# Local training corpora and generated self-play output
+training-data/
+
+# Environment and local machine files
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Logs and diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test and coverage output
+coverage/
+
+# Editor state
+.vscode/
+.idea/

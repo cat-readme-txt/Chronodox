@@ -1,0 +1,38 @@
+{
+  "name": "chronodox",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A browser-based timeline strategy game with hidden information, paradox mechanics, and retrainable hybrid AI policy artifacts.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "host": "npm run build && node scripts/host.mjs",
+    "preview": "vite preview",
+    "selfplay:build": "vite build --config vite.selfplay.config.ts",
+    "selfplay": "npm run selfplay:build && node .selfplay-dist/selfplay.js",
+    "hybrid:build": "vite build --config vite.train.config.ts",
+    "hybrid:train": "npm run hybrid:build && node .train-dist/train-hybrid.js"
+  },
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.18.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.0.5",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^8.2.1"
+  }
+}

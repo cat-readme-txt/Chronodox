@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #050510;
+  color: white;
+  overflow: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0612;
+}
+::-webkit-scrollbar-thumb {
+  background: #7b4fd4;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9b6ff4;
+}
+
+/* Canvas fills its container responsively */
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  image-rendering: auto;
+}
+
+/* Prevent text selection during gameplay */
+.select-none {
+  -webkit-user-select: none;
+  user-select: none;
+}
