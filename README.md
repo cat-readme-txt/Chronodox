@@ -66,8 +66,8 @@ npm run host
 The repository is set up to publish source code, not generated build folders. After pushing to GitHub:
 
 - CI runs `npm ci`, `npm audit`, and all build scripts on pushes and pull requests.
-- The GitHub Pages workflow builds `dist/` from source and uploads it as a Pages artifact.
-- To host the game directly from GitHub, enable GitHub Pages for the repository and select GitHub Actions as the Pages source.
+- The GitHub Pages workflow builds `dist/` from source and uploads it as a Pages artifact when run manually.
+- To host the game directly from GitHub, enable GitHub Pages for the repository, select GitHub Actions as the Pages source, then run the `Deploy GitHub Pages` workflow.
 
 Users do not need `training-data/` to play the current game. If there is no hosted Pages deployment, they will need to clone or download the repository and run the local setup commands above. With Pages enabled, they can play the built static app in the browser without cloning the source.
 
