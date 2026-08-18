@@ -69,6 +69,8 @@ The repository is set up to publish source code, not generated build folders. Af
 - The GitHub Pages workflow builds `dist/` from source and uploads it as a Pages artifact when run manually.
 - To host the game directly from GitHub, enable GitHub Pages for the repository, select GitHub Actions as the Pages source, then run the `Deploy GitHub Pages` workflow.
 
+Do not use `Deploy from a branch` with `/ (root)` for this app. That serves the Vite source `index.html`, which points at TypeScript source files instead of the compiled production bundle and will render as a blank page in the browser.
+
 Users do not need `training-data/` to play the current game. If there is no hosted Pages deployment, they will need to clone or download the repository and run the local setup commands above. With Pages enabled, they can play the built static app in the browser without cloning the source.
 
 ## AI And Training
