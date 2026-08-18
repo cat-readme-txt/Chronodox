@@ -66,8 +66,8 @@ npm run host
 The repository is set up to publish source code, not generated build folders. After pushing to GitHub:
 
 - CI runs `npm ci`, `npm audit`, and all build scripts on pushes and pull requests.
-- The GitHub Pages workflow builds `dist/` from source and uploads it as a Pages artifact when run manually.
-- To host the game directly from GitHub, enable GitHub Pages for the repository, select GitHub Actions as the Pages source, then run the `Deploy GitHub Pages` workflow.
+- The GitHub Pages workflow builds `dist/` from source and uploads it as a Pages artifact on pushes to `main` or when run manually.
+- To host the game directly from GitHub, enable GitHub Pages for the repository and select GitHub Actions as the Pages source. The next push, or a manual run of `Deploy GitHub Pages`, will publish the built app.
 
 Do not use `Deploy from a branch` with `/ (root)` for this app. That serves the Vite source `index.html`, which points at TypeScript source files instead of the compiled production bundle and will render as a blank page in the browser.
 
