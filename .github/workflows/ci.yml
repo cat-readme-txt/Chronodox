@@ -23,8 +23,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Audit dependencies
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=moderate
+
+      - name: Audit all dependencies for critical advisories
+        run: npm audit --audit-level=critical
+
+      # Tailwind 3 still pulls in build-only packages with unpatched advisories.
+      # Report them until a Tailwind 4 migration can be tested visually.
+      - name: Report build dependency advisories
         run: npm audit --audit-level=moderate
+        continue-on-error: true
 
       - name: Build app
         run: npm run build
