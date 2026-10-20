@@ -436,7 +436,7 @@ export default function App() {
     };
 
     if (activeMusicIdRef.current === targetMusic.id) {
-      if (audio.src !== (targetMusic.src ? new URL(targetMusic.src, window.location.origin).toString() : '')) {
+      if (audio.src !== (targetMusic.src ? new URL(targetMusic.src, document.baseURI).toString() : '')) {
         audio.src = targetMusic.src ?? '';
       }
       return;
